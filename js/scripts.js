@@ -3,23 +3,64 @@ let Continuar = true;
 do {
   let velocidade = 0
   let ModeloDeCarro = prompt(`
-  1- Koenigsegg Jesko Absolut (Velocidade Máxima: )
-  2- Hennessey Venom F5 (Velocidade Máxima: )
-  3- Aston Martin Valkyrie (Velocidade Máxima: )
-  4- McLaren Speedtail (Velocidade Máxima: )
-  5- Koenigsegg Gemera (Velocidade Máxima: )
-  6- Pagani Huayra BC Pacchetto Tempesta (Velocidade Máxima: )
-  7- Lamborghini Aventador LP780-4 Ultimae Coupe (Velocidade Máxima: )
-  8- Pininfarina Battista (Velocidade Máxima: )
-  9- Mercedes-AMG One (Velocidade Máxima: )
-  10- Ford GT (Velocidade Máxima: )
+  1- Koenigsegg Jesko Absolut (Velocidade Máxima: 531km/h)
+  2- Hennessey Venom F5 (Velocidade Máxima: 499km/h)
+  3- Aston Martin Valkyrie (Velocidade Máxima: 402km/h)
+  4- McLaren Speedtail (Velocidade Máxima: 402km/h)
+  5- Koenigsegg Gemera (Velocidade Máxima: 400km/h)
+  6- Pagani Huayra BC Pacchetto Tempesta (Velocidade Máxima: 380km/h)
+  7- Lamborghini Aventador LP780-4 Ultimae Coupe (Velocidade Máxima: 354km/h)
+  8- Pininfarina Battista (Velocidade Máxima: 350km/h)
+  9- Mercedes-AMG One (Velocidade Máxima: 350km/h)
+  10- Ford GT (Velocidade Máxima: 347km/h)
   11- Saber Mais`);
 
   ModeloDeCarro = parseInt(ModeloDeCarro);
 
   if (isNaN(ModeloDeCarro) || ModeloDeCarro < 1 || ModeloDeCarro > 11) {
-    a;
-  } else if (ModeloDeCarro === 11) {
+    alert(`Digite somente números`)
+  }
+  else if (ModeloDeCarro === 1) {
+    ModeloDeCarro = `Koenigsegg Jesko Absolut`
+    PainelDeControle = true
+  }
+  else if (ModeloDeCarro === 2) {
+    ModeloDeCarro = `Hennessey Venom F5`
+    PainelDeControle = true
+   }
+   else if (ModeloDeCarro === 3) {
+    ModeloDeCarro = `Aston Martin Valkyrie`
+    PainelDeControle = true
+   }
+   else if (ModeloDeCarro === 4) {
+    ModeloDeCarro = `McLaren Speedtail`
+    PainelDeControle = true
+   }
+   else if (ModeloDeCarro === 5) {
+    ModeloDeCarro = `Koenigsegg Gemera`
+    PainelDeControle = true
+   }
+   else if (ModeloDeCarro === 6) {
+    ModeloDeCarro = `Pagani Huayra BC Pacchetto Tempesta`
+    PainelDeControle = true
+   }
+   else if (ModeloDeCarro === 7) {
+    ModeloDeCarro = `Lamborghini Aventador LP780-4 Ultimae Coupe`
+    PainelDeControle = true
+   }
+   else if (ModeloDeCarro === 8) {
+    ModeloDeCarro = `Pininfarina Battista`
+    PainelDeControle = true
+   }
+   else if (ModeloDeCarro === 9) {
+    ModeloDeCarro = `Mercedes-AMG One`
+    PainelDeControle = true
+   }
+   else if (ModeloDeCarro === 10) {
+    ModeloDeCarro = `Ford GT`
+    PainelDeControle = true
+   }
+  else if (ModeloDeCarro === 11) {
     let SobreRepetidor = true;
 
     do {
@@ -34,6 +75,7 @@ do {
     8- Pininfarina Battista
     9- Mercedes-AMG One
     10- Ford GT
+    11- Voltar
   `);
 
       InformacoesSobreOsCarros = parseInt(InformacoesSobreOsCarros);
@@ -41,7 +83,7 @@ do {
       if (
         isNaN(InformacoesSobreOsCarros) ||
         InformacoesSobreOsCarros < 1 ||
-        InformacoesSobreOsCarros > 10
+        InformacoesSobreOsCarros > 11
       ) {
         alert(`Digite somente números entre 1 e 10`);
       } else {
@@ -148,8 +190,16 @@ do {
             Torque: 76 kgfm
             Preço (em dólares): US$ 500 mil`);
             break;
+          case 11:
+            SobreRepetidor = false
+            alert(`Voltando...`)
+            break;
         }
       }
     } while (SobreRepetidor === true);
   }
+
+  do {
+    
+  }while(PainelDeControle === true)
 } while (Continuar === true);
