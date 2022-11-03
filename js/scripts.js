@@ -1,7 +1,7 @@
 let Continuar = true;
 
 do {
-  let velocidade = 0
+  let Velocidade = 0
   let ModeloDeCarro = prompt(`
   1- Koenigsegg Jesko Absolut (Velocidade Máxima: 531km/h)
   2- Hennessey Venom F5 (Velocidade Máxima: 499km/h)
@@ -200,6 +200,33 @@ do {
   }
 
   do {
+    let Selecionador = prompt(`
+    1- Acelerar
+    2- Desacelerar
+    3- Multas
+    4- Processo De Multas
+    5- Sair
+     `)
+    Selecionador = parseInt(Selecionador)
     
+    if (isNaN(Selecionador) || Selecionador > 5 || Selecionador < 1) {
+      alert(`Digite somente números entre 1 a 5`)
+    }
+    else if (Selecionador === 1) {
+      let Repetidor = true
+
+      do {
+        Velocidade = prompt(`Digite a velocidade que gostaria de acelerar
+        1- 5km/h
+        2- 10km/h
+        3- 25km/h
+        4- 50km/h
+        5- 100km/h`)
+
+        if (isNaN(Velocidade) || Velocidade > 5 || Velocidade < 1) {
+          alert(`Digite somente números entre 1 a 5`)
+        }
+      }while(Repetidor === true)
+    }
   }while(PainelDeControle === true)
 } while (Continuar === true);
