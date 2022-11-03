@@ -222,10 +222,10 @@ do {
         3- 25km/h
         4- 50km/h
         5- 100km/h`)
-
+        Velocidade = parseInt(Velocidade)
         if (isNaN(Velocidade) || Velocidade > 5 || Velocidade < 1) {
           alert(`Digite somente números entre 1 a 5`)
-        }
+        } 
       }while(Repetidor === true)
     }
   }while(PainelDeControle === true)
